@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <script src="https://cdn.tailwindcss.com"></script>  
+         <title>Registration Form</title> 
+    </head>
+    <body class="bg-white font-sans">
+
+    <div class="main-wrapper flex flex-col items-center justify-center min-h-screen gap-[40px] ">
+
+        <div class="container p-[20px] shadow-[0_0_20px_rgba(0,0,0,0.2)] w-[400px] rounded-xl m-auto">
+
+            <h1 class="mb-4 text-center text-xl font-bold ">Registration Form</h1>
+
+            <form id="user-form">
+                <div class=" flex items-center ">
+                    <label for="name" class="flex-1 text-left  mr-3 ml-5 items-baseline font-semibold">Name</label>
+                    <input required type="text" placeholder="Enter full name" id="name" name="name" 
+                    class="flex-2  p-[15px] m-[5px_0_22px_0] inline-block border-none bg-[#f1f1f1] rounded-xl ">
+                </div>
+                <div class="flex items-center">
+                    <label for="email" class="flex-1 text-left  mr-3 ml-5 items-baseline font-semibold">Email</label>
+                    <input required type="email" placeholder="Enter email" id="email" name="email"
+                    class="flex-2 p-[15px] m-[5px_0_22px_0] inline-block border-none bg-[#f1f1f1] rounded-xl ">
+                </div>
+                <div class=" flex items-center">
+                    <label for="password" class="flex-1 text-left  mr-3 ml-5 items-baseline font-semibold">Password</label>
+                    <input required type="password" id="password" placeholder="Enter password" name="password"
+                    class="flex-2 p-[15px] m-[5px_0_22px_0] inline-block border-none bg-[#f1f1f1] rounded-xl ">
+                </div>
+                <div class=" flex items-center">
+                    <label for="dob" class="flex-1 text-left  mr-3 ml-5 items-baseline font-semibold w-32">Date Of Birth</label>
+                    <input required type="date" id="dob"  name="dob" 
+                    class="flex-2 p-[15px] m-[5px_0_22px_0]  inline-block border-none bg-[#f1f1f1] rounded-xl w-56">
+                </div>
+                <div class=" flex items-baseline mb-4 mt-4" >
+                    <input required type="checkbox" id="acceptTerms" name="acceptTerms" class="ml-4 transform scale-120">
+                    <label for="acceptTerms" class="ml-4 font-medium">Accept Terms & Conditions</label>
+                </div>
+                <div>
+                    <button type="submit" id="submit" 
+                    class="bg-green-500 hover:bg-green-600 px-6 py-4 rounded-xl text-white shadow">Submit</button>
+                </div>
+            </form>
+        </div>
+
+
+       <div id="user-entries" class="p-8 w-[700px] mx-auto mb-10 bg-white shadow-[0_0_12px_rgba(0,0,0,0.08)] rounded-xl font-medium text-[16px] "></div>
+        
+    </div>
+    <script src="index.js"></script>
+
+    </body>
+</html>
