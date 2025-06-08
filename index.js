@@ -40,12 +40,6 @@ let saveUserForm =(event)=>{
     let dob =document.getElementById('dob').value;
     let acceptedterms=document.getElementById('acceptTerms').checked;
     
-    let birthDate = new Date(dob);
-    let today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-    if (age < 18 || age > 55) {
-        return;
-    }
     let entry={
         name,
         email,
@@ -62,8 +56,8 @@ userForm.addEventListener('submit',saveUserForm);
 display();
 //date of birth
 let today = new Date();
-let minDate= new Date(today.getFullYear()-55,today.getMonth(),today.getDate());
-let maxDate= new Date(today.getFullYear()-18,today.getMonth(),today.getDate());
+let minDate= new Date(today.getFullYear()-55,01,01);
+let maxDate= new Date(today.getFullYear()-18,01,01);
 
 let formatDate= date => date.toISOString().split('T')[0];
 
