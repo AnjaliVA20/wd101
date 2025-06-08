@@ -39,6 +39,17 @@ let saveUserForm =(event)=>{
     let password=document.getElementById('password').value;
     let dob =document.getElementById('dob').value;
     let acceptedterms=document.getElementById('acceptTerms').checked;
+    
+    let birthDate = new Date(dob);
+    let today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    let monthdiff = today.getMonth() - birthDate.getMonth();
+    if (monthdiff < 0 || (monthdiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    if (age < 18 || age > 55) {
+        return;
+    }
     let entry={
         name,
         email,
